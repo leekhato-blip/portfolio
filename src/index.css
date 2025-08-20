@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes slow-pan {
+  from { background-position: 0% 0%; }
+  to   { background-position: 200% 200%; }
+}
+
+@keyframes slow-pan-reverse {
+  from { background-position: 200% 200%; }
+  to { background-position:  0% 0%; }
+}
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: twinkle 3s infinite ease-in-out;
+}
+
+/* .stars {
+  background-image: radial-gradient(rgba(255,255,255,0.4) 1px, transparent 1px);
+  background-size: 50px 50px;
+} */
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 0.2; }
+}
+
+.animate-slow-pan {
+  animation: slow-pan 60s linear infinite;
+}
+
+.animate-slow-pan-reverse {
+  animation: slow-pan-reverse 100s linear infinite, twinkle 5s ease-in-out alternate;
+}
