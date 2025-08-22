@@ -11,7 +11,7 @@ const StarryBackground = ({ starCount = 80 }) => {
   }));
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {/* 🌌 Background stars */}
+      
       {stars.map((star) => (
         <div
           key={star.id}

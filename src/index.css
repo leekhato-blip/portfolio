@@ -36,3 +36,30 @@
 .animate-slow-pan-reverse {
   animation: slow-pan-reverse 100s linear infinite, twinkle 5s ease-in-out alternate;
 }
+
+/* Add to your CSS */
+.shooting-star {
+  position: absolute;
+  width: 3px;
+  height: 80px;
+  background: linear-gradient(white, transparent);
+  transform: rotate(-45deg);
+  opacity: 0.8;
+  pointer-events: none;
+  animation: shooting 1s ease-out infinite;
+}
+
+@keyframes shooting {
+  0% { opacity: 0; transform: translate(0,0) rotate(-45deg); }
+  50% { opacity: 1; }
+  100% { opacity: 0; transform: translate(300px, -300px) rotate(-45deg); }
+}
+
+.glow-button {
+  box-shadow: 0 0 15px rgba(168,85,247,0.5);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.glow-button:hover {
+  box-shadow: 0 0 35px rgba(168,85,247,0.8);
+}
