@@ -6,6 +6,7 @@ import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import StarryBackground from "./components/StarryBackground";
+import Testimonials from "./components/Testimonials";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
     <About />
     <Projects />
     <Skills />
+    <Testimonials />
     <Contact />
 
     </>

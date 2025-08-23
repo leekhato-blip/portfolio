@@ -27,10 +27,12 @@ const Projects = () => {
     <div
       id="projects"
       className="relative min-h-screen py-20 px-6 
-                  bg-gradient-to-b from-[#0f172a] via-[#1e293b] to-[#334155] text-gray-200
+                 bg-gradient-to-b from-[#0f172a] via-[#1e293b] to-[#3b0764]
+
+
                  text-gray-200"
     >
-        {/* ✨ Starry night background */}
+      {/* ✨ Starry night b<ackground */}
       <StarryBackground starCount={120} />
       <section className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-12 text-purple-300">Projects</h2>
@@ -42,7 +44,10 @@ const Projects = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: i * 0.2 }}
-              whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(168,85,247,0.6)" }}
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 0 25px rgba(168,85,247,0.6)",
+              }}
               className="bg-[#1e1b4b]/40 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg cursor-pointer"
             >
               {/* Project Image */}
@@ -54,7 +59,9 @@ const Projects = () => {
 
               {/* Project Info */}
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-purple-300 mb-2">{project.title}</h3>
+                <h3 className="text-xl font-semibold text-purple-300 mb-2">
+                  {project.title}
+                </h3>
                 <p className="text-gray-300 mb-4">{project.description}</p>
 
                 {/* Buttons */}

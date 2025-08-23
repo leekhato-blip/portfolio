@@ -10,6 +10,7 @@ import {
   SiLinux,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
+import StarryBackground from "./StarryBackground";
 
 // ✅ Skills with coords + levels
 const skills = [
@@ -92,11 +93,13 @@ const Skills = () => {
     
     <div
       id="skills"
-      className="relative min-h-screen py-20 px-6 
-                 bg-gradient-to-b from-[#3b0764] via-[#1e1b4b] to-[#0f172a] 
+      className="relative min-h-screen py-20 px-7 
+                bg-gradient-to-b from-[#3b0764] via-[#1e1b4b] to-[#0f172a]
+
+ 
                  text-gray-200 overflow-hidden"
     >
-      
+      <StarryBackground starCount={50} />
       <motion.h2
         initial={{ opacity: 0, y: -40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -146,7 +149,7 @@ const Skills = () => {
       {/* 💻 Desktop version */}
       <div className="hidden lg:block relative w-full h-[850px]">
         {/* Lines connecting skills */}
-        <svg className="absolute inset-0 w-full h-full">
+        <svg className="absolute w-full h-full">
           <defs>
             <linearGradient id="lineGradient" x1="0" y1="0" x2="1" y2="1">
               <stop offset="0%" stopColor="rgba(168,85,247,0.15)" />
@@ -252,8 +255,11 @@ const Skills = () => {
             </motion.div>
           );
         })}
+        
       </div>
+      
     </div>
+    
   );
 };
 

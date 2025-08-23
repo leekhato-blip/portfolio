@@ -19,11 +19,6 @@
   animation: twinkle 3s infinite ease-in-out;
 }
 
-/* .stars {
-  background-image: radial-gradient(rgba(255,255,255,0.4) 1px, transparent 1px);
-  background-size: 50px 50px;
-} */
-
 @keyframes twinkle {
   0%, 100% { opacity: 0.8; }
   50% { opacity: 0.2; }
@@ -37,7 +32,6 @@
   animation: slow-pan-reverse 100s linear infinite, twinkle 5s ease-in-out alternate;
 }
 
-/* Add to your CSS */
 .shooting-star {
   position: absolute;
   width: 3px;
@@ -62,4 +56,47 @@
 
 .glow-button:hover {
   box-shadow: 0 0 35px rgba(168,85,247,0.8);
+}
+
+/* Floating orbits for Testimonials */
+.orbit {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: -50% -50%;
+}
+
+.orbit-one {
+  width: 0; height: 0;
+  animation: orbit-rotate 22s linear infinite;
+}
+.orbit-one > div {
+  position: absolute;
+  /* ✅ stays upright, only floats */
+  transform: translate(-50%, -50%) translateX(260px);
+}
+
+.orbit-two {
+  animation: orbit-rotate-rev 28s linear infinite;
+}
+.orbit-two > div {
+  position: absolute;
+  transform: translate(-50%, -50%) translateX(170px);
+}
+
+.orbit-three {
+  animation: orbit-rotate 34s linear infinite;
+}
+.orbit-three > div {
+  position: absolute;
+  transform: translate(-50%, -50%) translateX(340px);
+}
+
+@keyframes orbit-rotate {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+@keyframes orbit-rotate-rev {
+  from { transform: translate(-50%, -50%) rotate(360deg); }
+  to   { transform: translate(-50%, -50%) rotate(0deg); }
 }
