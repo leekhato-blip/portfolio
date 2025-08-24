@@ -100,3 +100,31 @@
   from { transform: translate(-50%, -50%) rotate(360deg); }
   to   { transform: translate(-50%, -50%) rotate(0deg); }
 }
+
+.glow-button {
+  box-shadow: 0 0 15px rgba(168,85,247,0.6);
+  animation: pulseGlow 2s infinite alternate;
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 15px rgba(168,85,247,0.6); }
+  100% { box-shadow: 0 0 35px rgba(168,85,247,0.9); }
+}
+/* Shooting streak animation */
+.streak {
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(transparent, #a855f7);
+  top: -100%;
+  left: 50%;
+  animation: streak-fall 0.8s linear forwards;
+}
+
+@keyframes streak-fall {
+  0% { top: -100%; opacity: 0; }
+  50% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+

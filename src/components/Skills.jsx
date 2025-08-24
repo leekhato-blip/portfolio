@@ -94,7 +94,7 @@ const Skills = () => {
     <div
       id="skills"
       className="relative min-h-screen py-20 px-7 
-                bg-gradient-to-b from-[#3b0764] via-[#1e1b4b] to-[#0f172a]
+                bg-gradient-to-b from-[#0f172a] via-[#1e1b4b] to-[#3b0764]
 
  
                  text-gray-200 overflow-hidden"
