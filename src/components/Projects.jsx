@@ -1,4 +1,3 @@
-// Projects.jsx
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import StarryBackground from "./StarryBackground";
@@ -9,7 +8,7 @@ const projects = [
     description: "Livestock and fish farm management web & mobile app.",
     fullDescription:
       "A complete livestock and fish farm management app with responsive web and mobile views. Tracks feeds, production, fish hatching, and inventory in a simple elderly-friendly UI.",
-    image: "/src/assets/img/coming_soon.png",
+    image: "/assets/img/coming_soon.png",
     codeUrl: "https://github.com/leekhato-blip/kfarms-backend",
     liveUrl: "https://kfarms.example.com",
     tech: ["React", "Java", "Spring Boot", "Tailwind CSS"],
@@ -20,7 +19,7 @@ const projects = [
     description: "Personal portfolio showcasing projects and skills.",
     fullDescription:
       "Portfolio site to display personal projects, skills, and testimonials. Built with React + Tailwind CSS and modern animations for smooth UX.",
-    image: "/src/assets/img/portfolio-hero.png",
+    image: "/assets/img/portfolio-hero.png",
     codeUrl: "https://github.com/leekhato-blip/portfolio",
     liveUrl: "http://localhost:5173/",
     tech: ["React", "Tailwind CSS"],
@@ -31,7 +30,7 @@ const projects = [
     description: "Operations optimization dashboard for startups.",
     fullDescription:
       "Dashboard for operations management, analytics, and performance optimization, built with Java, Spring Boot, MySQL, and Docker.",
-    image: "/src/assets/img/coming_soon.png",
+    image: "/assets/img/coming_soon.png",
     codeUrl: "https://github.com/Rootsinc23/roots-website",
     liveUrl: "https://roots.example.com",
     tech: ["Java", "Spring Boot", "MySQL", "Docker"],
@@ -45,12 +44,14 @@ const Projects = () => {
   return (
     <div
       id="projects"
-      className="relative min-h-screen py-20 px-6 bg-gradient-to-b from-[#3b0764] via-[#1e293b] to-[#0f172a] text-gray-200 overflow-hidden"
+      className="relative min-h-screen py-20 px-6 bg-[#0f172a] text-gray-200 overflow-hidden"
     >
       <StarryBackground starCount={120} />
 
       <section className="max-w-6xl mx-auto text-center">
-        <h2 className="font-heading text-4xl font-bold mb-12 text-purple-300">Projects</h2>
+        <h2 className="font-heading text-4xl font-bold mb-12 text-purple-300">
+          Projects
+        </h2>
 
         <div className="font-body grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, i) => (

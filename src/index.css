@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+body{
+  background: #0f172a;
+}
 @keyframes slow-pan {
   from { background-position: 0% 0%; }
   to   { background-position: 200% 200%; }
