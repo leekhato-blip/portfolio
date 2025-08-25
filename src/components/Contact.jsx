@@ -2,8 +2,9 @@
 import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import StarryBackground from "./StarryBackground";
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 import { Check } from "lucide-react";
+import { send } from "@emailjs/browser";
 
 const Contact = () => {
   const [sending, setSending] = useState(false);
@@ -19,17 +20,30 @@ const Contact = () => {
     setShowShootingStar(true);
     setShowPopup(true);
 
-    // Hide shooting star shortly after animation
+    const formData = new FormData(e.target);
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const message = formData.get("message");
+
+    send(
+      "service_imf1j3h",
+      "template_5xev5na",
+      { name, email, message },
+      "RBxMNEhzLznkH2vtw"
+    )
+      .then((res) => {
+        console.log("Message sent successfully", res.status, res.text);
+      })
+      .catch((err) => {
+        console.log("Failed to send message", err);
+        alert("Failed to send message. Try again, InshaAllah");
+      })
+      .finally(() => {
+        setSending(false);
+        e.target.reset();
+        setTimeout(() => setShowPopup(false), 2500);
+      });
     setTimeout(() => setShowShootingStar(false), 900);
-
-    // Simulate send + auto hide popup (timings tuned for smoothness)
-    setTimeout(() => {
-      setSending(false);
-      e.target.reset();
-    }, 1100);
-
-    // Auto-hide popup after a little while
-    setTimeout(() => setShowPopup(false), 2500);
   };
 
   return (
@@ -42,7 +56,7 @@ const Contact = () => {
       {/* Background */}
       <StarryBackground starCount={70} />
 
-      <h2 className="text-center text-4xl font-bold text-purple-300 mb-12">
+      <h2 className="font-heading text-center text-4xl font-bold text-purple-300 mb-12">
         Let’s Connect
       </h2>
 
@@ -77,7 +91,7 @@ const Contact = () => {
         <div className="relative">
           <form
             onSubmit={onSubmit}
-            className="bg-white/5 backdrop-blur-md border border-purple-300/20 
+            className="font-body bg-white/5 backdrop-blur-md border border-purple-300/20 
                        rounded-2xl p-6 md:p-8 shadow-[0_0_30px_rgba(168,85,247,0.15)] flex flex-col gap-4"
             aria-describedby="contact-instructions"
           >
@@ -176,7 +190,7 @@ const Contact = () => {
               <FaLinkedin />
             </motion.a>
             <motion.a
-              href="#"
+              href="https://x.com/LeeKhato"
               aria-label="Twitter"
               whileHover={{ scale: 1.15, color: "#a855f7" }}
               className="text-purple-300 transition"
@@ -189,7 +203,7 @@ const Contact = () => {
               whileHover={{ scale: 1.15, color: "#a855f7" }}
               className="text-purple-300 transition"
             >
-              <FaEnvelope />
+              <FaInstagram />
             </motion.a>
           </div>
         </div>

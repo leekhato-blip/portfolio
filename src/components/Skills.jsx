@@ -104,7 +104,7 @@ const Skills = () => {
         initial={{ opacity: 0, y: -40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-5xl font-bold mb-16 text-purple-300 text-center"
+        className="font-heading text-4xl font-bold mb-16 text-purple-300 text-center"
       >
         Skills
       </motion.h2>
@@ -121,7 +121,7 @@ const Skills = () => {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="flex flex-col gap-2 bg-[#1e1b4b]/80 p-4 rounded-xl shadow-md"
             >
-              <div className="flex items-center gap-3">
+              <div className="font-body flex items-center gap-3">
                 <Icon className="text-purple-300" size={28} />
                 <div>
                   <p className="text-lg font-semibold text-gray-200">

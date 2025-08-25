@@ -21,7 +21,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-lg text-purple-300 mb-3"
+          className="font-body tracking-wide text-lg text-purple-300 mb-3"
         >
           Salam! ✨ I’m
         </motion.p>
@@ -44,7 +44,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: -15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.6 }}
-          className="mt-4 text-2xl text-gray-300"
+          className="font-body font-medium mt-4 sm:text-2xl text-gray-300"
         >
           Software Developer
         </motion.h2>
@@ -54,7 +54,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.8, ease: easeInOut }}
-          className="mt-6 flex flex-wrap justify-center gap-3.5"
+          className="font-body mt-6 flex flex-wrap justify-center gap-3.5"
         >
           {["Java", "React", "Growth", "Innovation"].map((skill, i) => (
             <motion.span
@@ -85,10 +85,12 @@ const Hero = () => {
           className="mt-10 px-8 py-3 rounded-lg 
                      bg-purple-600 hover:bg-purple-500 
                      shadow-lg glow-button 
-                     transition font-medium"
+                     transition font-medium
+                     uppercase tracking-wide"
         >
           Explore My World
         </motion.a>
+        
       </section>
 
       {/* ⭐ Scroll Indicator */}

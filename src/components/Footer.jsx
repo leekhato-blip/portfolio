@@ -12,11 +12,11 @@ const Footer = () => {
         {/* Left: Brand */}
         <div className="text-center md:text-left">
           <h1 className="text-xl font-bold text-purple-400">Khato Lee</h1>
-          <p className="text-sm">Building the future, one line of code at a time</p>
+          <p className="font-body text-sm">Building the future, one line of code at a time</p>
         </div>
 
         {/* Center: Nav Links */}
-        <div className="flex gap-6">
+        <div className="flex gap-3">
           <a href="#hero" className="hover:text-purple-400 transition">Home</a>
           <a href="#about" className="hover:text-purple-400 transition">About</a>
           <a href="#projects" className="hover:text-purple-400 transition">Projects</a>
@@ -29,7 +29,7 @@ const Footer = () => {
           <a href="https://linkedin.com" target="_blank" className="hover:text-purple-400 transition">
             <FaLinkedin />
           </a>
-          <a href="https://github.com" target="_blank" className="hover:text-purple-400 transition">
+          <a href="https://github.com/leekhato-blip" target="_blank" className="hover:text-purple-400 transition">
             <FaGithub />
           </a>
           <a href="https://instagram.com" target="_blank" className="hover:text-purple-400 transition">

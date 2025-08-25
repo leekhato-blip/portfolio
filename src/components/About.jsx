@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import StarryBackground from "./StarryBackground";
 
@@ -9,6 +10,8 @@ const milestones = [
 ];
 
 const About = () => {
+  const [readMore, setReadMore] = useState(false);
+
   return (
     <div
       id="about"
@@ -18,22 +21,32 @@ const About = () => {
       <StarryBackground starCount={100} />
       <section className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-12 items-start">
 
-        {/* 👤 Left Column: Personal Story */}
+        {/* Left Column */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
           className="lg:w-1/2"
         >
-          <h2 className="text-4xl font-bold mb-6 text-purple-300">About Me</h2>
-          <p className="text-gray-300 text-lg leading-relaxed">
-            I’m Khato Lee, a passionate software developer focused on building meaningful applications. 
-            My journey started with Java and React, and over the years I’ve explored various domains in tech, 
-            learning, growing, and creating. I’m deeply committed to continual growth, innovation, and sharing my journey with others, InshaAllah.
+          <h2 className="font-heading text-4xl font-bold mb-6 text-purple-300">About Me</h2>
+          <p className="font-body text-gray-300 text-lg leading-relaxed">
+            I’m Khato Lee, a passionate software developer focused on building meaningful applications.
+            {readMore && (
+              <>
+                {" "}My journey started with Java and React, and over the years I’ve explored various domains in tech, 
+                learning, growing, and creating. I’m deeply committed to continual growth, innovation, and sharing my journey with others, InshaAllah.
+              </>
+            )}
           </p>
+          <button
+            onClick={() => setReadMore(!readMore)}
+            className="mt-3 text-purple-400 hover:underline font-semibold"
+          >
+            {readMore ? "Read Less" : "Read More"}
+          </button>
         </motion.div>
 
-        {/* 🌌 Right Column: Constellation Timeline */}
+        {/* Right Column: Timeline (unchanged) */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -41,12 +54,8 @@ const About = () => {
           className="lg:w-1/2 flex flex-col gap-12 relative"
         >
           <h2 className="text-4xl font-bold mb-6 text-purple-300 hidden lg:block">My Journey</h2>
-
           <div className="relative">
-            {/* Vertical line */}
             <div className="absolute left-5 top-0 w-1 h-full bg-purple-600/40"></div>
-
-            {/* Milestones */}
             {milestones.map((m, i) => (
               <motion.div
                 key={i}
@@ -54,10 +63,7 @@ const About = () => {
                 className="relative mb-12 flex items-start cursor-pointer"
                 title={m.description}
               >
-                {/* Dot */}
                 <div className="w-4 h-4 rounded-full bg-purple-400 z-10"></div>
-
-                {/* Text */}
                 <div className="ml-6">
                   <p className="text-purple-300 font-semibold">{m.year}</p>
                   <h3 className="text-gray-200 font-medium">{m.title}</h3>
@@ -66,11 +72,9 @@ const About = () => {
               </motion.div>
             ))}
           </div>
-          
         </motion.div>
-        
+
       </section>
-      
     </div>
   );
 };

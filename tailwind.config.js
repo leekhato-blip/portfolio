@@ -3,7 +3,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        heading: ["Playfair Display", "serif"],
+        heading: ["Lora", "serif"],
         body: ["Poppins", "sans-serif"],
       },
     },
