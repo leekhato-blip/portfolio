@@ -21,7 +21,7 @@ const projects = [
       "Portfolio site to display personal projects, skills, and testimonials. Built with React + Tailwind CSS and modern animations for smooth UX.",
     image: "/assets/img/portfolio-hero.png",
     codeUrl: "https://github.com/leekhato-blip/portfolio",
-    liveUrl: "http://localhost:5173/",
+    liveUrl: "khato.vercel.app",
     tech: ["React", "Tailwind CSS"],
     isLive: true,
   },
