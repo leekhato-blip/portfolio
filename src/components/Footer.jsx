@@ -26,13 +26,13 @@ const Footer = () => {
 
         {/* Right: Social */}
         <div className="flex gap-4 text-xl">
-          <a href="https://linkedin.com" target="_blank" className="hover:text-purple-400 transition">
+          <a href="https://www.linkedin.com/in/khato-lee-295907380/" target="_blank" className="hover:text-purple-400 transition">
             <FaLinkedin />
           </a>
           <a href="https://github.com/leekhato-blip" target="_blank" className="hover:text-purple-400 transition">
             <FaGithub />
           </a>
-          <a href="https://instagram.com" target="_blank" className="hover:text-purple-400 transition">
+          <a href="https://www.instagram.com/katoabdulsalamii?igsh=MTFkb3pnNHFkNnN5OA==" target="_blank" className="hover:text-purple-400 transition">
             <FaInstagram />
           </a>
         </div>
