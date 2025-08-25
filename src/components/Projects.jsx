@@ -44,7 +44,7 @@ const Projects = () => {
   return (
     <div
       id="projects"
-      className="relative min-h-screen py-20 px-6 bg-[#0f172a] text-gray-200 overflow-hidden"
+      className="relative min-h-screen bg-gradient-to-b from-[#3b0764] via-[#1e293b] to-[#0f172a] py-20 px-6 bg-[#0f172a] text-gray-200 overflow-hidden"
     >
       <StarryBackground starCount={120} />
 
