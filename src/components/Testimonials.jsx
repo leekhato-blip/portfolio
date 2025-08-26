@@ -9,19 +9,9 @@ const testimonials = [
     role: "Product Manager",
   },
   {
-    quote: "His Java + React skills are solid. Loved the attention to UX details.",
-    name: "Abraham Daniel",
-    role: "Tech Lead",
-  },
-  {
     quote: "Reliable, humble, and fast. InshaAllah, we’ll collaborate again soon.",
     name: "Zainab Oladipo",
     role: "Founder",
-  },
-  {
-    quote: "Always professional and a pleasure to work with. Highly recommended.",
-    name: "Chinedu Okafor",
-    role: "CTO",
   },
   {
     quote: "Creative, skilled, and dependable. Truly exceptional work.",
