@@ -19,9 +19,9 @@ const Footer = () => {
         <div className="flex gap-3">
           <a href="#hero" className="hover:text-purple-400 transition">Home</a>
           <a href="#about" className="hover:text-purple-400 transition">About</a>
+          <a href="#skills" className="hover:text-purple-400 transition">Skills</a>
           <a href="#projects" className="hover:text-purple-400 transition">Projects</a>
           <a href="#testimonials" className="hover:text-purple-400 transition">Testimonials</a>
-          <a href="#contact" className="hover:text-purple-400 transition">Contact</a>
         </div>
 
         {/* Right: Social */}

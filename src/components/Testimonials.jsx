@@ -5,30 +5,41 @@ import StarryBackground from "./StarryBackground";
 const testimonials = [
   {
     quote: "Khato delivered with heart and precision. Clean architecture, clear communication.",
-    name: "Aisha M.",
+    name: "Aisha Musa",
     role: "Product Manager",
   },
   {
     quote: "His Java + React skills are solid. Loved the attention to UX details.",
-    name: "Ibrahim D.",
+    name: "Abraham Daniel",
     role: "Tech Lead",
   },
   {
     quote: "Reliable, humble, and fast. InshaAllah, we’ll collaborate again soon.",
-    name: "Zainab O.",
+    name: "Zainab Oladipo",
     role: "Founder",
   },
   {
     quote: "Always professional and a pleasure to work with. Highly recommended.",
-    name: "Ahmed S.",
+    name: "Chinedu Okafor",
     role: "CTO",
   },
   {
     quote: "Creative, skilled, and dependable. Truly exceptional work.",
-    name: "Fatima K.",
+    name: "Fatima Kareem",
     role: "Designer",
   },
+  {
+    quote: "He brings both creativity and discipline to every project.",
+    name: "Ngozi Eze",
+    role: "UX Researcher",
+  },
+  {
+    quote: "Khato has a rare blend of technical skill and human warmth.",
+    name: "Tolu Adebayo",
+    role: "Software Engineer",
+  },
 ];
+
 
 const Card = ({ q, n, r }) => (
   <div className="w-72 max-w-[19rem] bg-white/5 backdrop-blur-md rounded-2xl border border-purple-300/20 
