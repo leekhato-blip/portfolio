@@ -141,7 +141,7 @@ const Contact = () => {
           <motion.a href="https://x.com/LeeKhato" target="_blank" aria-label="Twitter" whileHover={{ scale: 1.15, color: "#a855f7" }} className="text-purple-300 transition">
             <FaTwitter />
           </motion.a>
-          <motion.a href="https://www.instagram.com/leekhato7?igsh=MTFkb3pnNHFkNnN5OA==" target="_blank" aria-label="Instagram" whileHover={{ scale: 1.15, color: "#a855f7" }} className="text-purple-300 transition">
+          <motion.a href="https://www.instagram.com/khatolee7/" target="_blank" aria-label="Instagram" whileHover={{ scale: 1.15, color: "#a855f7" }} className="text-purple-300 transition">
             <FaInstagram />
           </motion.a>
         </div>
