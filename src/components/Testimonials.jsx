@@ -10,7 +10,7 @@ const testimonials = [
   },
   {
     quote: "Reliable, humble, and fast. InshaAllah, we’ll collaborate again soon.",
-    name: "Zainab Oladipo",
+    name: "Zainab T.",
     role: "Founder",
   },
   {
