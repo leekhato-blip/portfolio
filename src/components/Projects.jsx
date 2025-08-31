@@ -8,7 +8,7 @@ const projects = [
     description: "Livestock and fish farm management web & mobile app.",
     fullDescription:
       "A complete livestock and fish farm management app with responsive web and mobile views. Tracks feeds, production, fish hatching, and inventory in a simple elderly-friendly UI.",
-    image: "/assets/img/coming_soon.png",
+    image: "/assets/img/kfarmapp.png",
     codeUrl: "https://github.com/leekhato-blip/kfarms-backend",
     liveUrl: "https://kfarms.example.com",
     tech: ["React", "Java", "Spring Boot", "Tailwind CSS"],
