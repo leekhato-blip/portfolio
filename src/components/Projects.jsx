@@ -30,11 +30,11 @@ const projects = [
     description: "Operations optimization dashboard for startups.",
     fullDescription:
       "Dashboard for operations management, analytics, and performance optimization, built with Java, Spring Boot, MySQL, and Docker.",
-    image: "/assets/img/coming_soon.png",
+    image: "/assets/img/roots.png",
     codeUrl: "https://github.com/Rootsinc23/roots-website",
-    liveUrl: "https://roots.example.com",
+    liveUrl: "https://rootswrld.vercel.app/",
     tech: ["Java", "Spring Boot", "MySQL", "Docker"],
-    isLive: false,
+    isLive: true,
   },
 ];
 
