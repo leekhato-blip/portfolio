@@ -32,7 +32,7 @@ const Footer = () => {
           <a href="https://github.com/leekhato-blip" target="_blank" className="hover:text-purple-400 transition">
             <FaGithub />
           </a>
-          <a href="https://www.instagram.com/katoabdulsalamii?igsh=MTFkb3pnNHFkNnN5OA==" target="_blank" className="hover:text-purple-400 transition">
+          <a href="https://www.instagram.com/khatolee7/" target="_blank" className="hover:text-purple-400 transition">
             <FaInstagram />
           </a>
         </div>
