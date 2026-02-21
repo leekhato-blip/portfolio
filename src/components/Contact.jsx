@@ -106,7 +106,7 @@ const Contact = () => {
         >
           <span className="section-kicker">Contact</span>
           <h2 className="mt-4 font-heading text-4xl text-purple-200 sm:text-5xl md:text-6xl">
-            Let's build something extraordinary
+            Let&apos;s connect
           </h2>
         </Motion.div>
 

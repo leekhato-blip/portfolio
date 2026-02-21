@@ -108,7 +108,7 @@ const Skills = () => {
       >
         <span className="section-kicker">Skills</span>
         <h2 className="mt-4 font-heading text-5xl text-purple-200 md:text-6xl">
-          Precision across frontend and backend
+          Tools I use day to day
         </h2>
       </Motion.div>
 

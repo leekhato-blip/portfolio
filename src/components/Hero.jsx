@@ -21,7 +21,7 @@ const Hero = () => {
             transition={{ duration: 0.6 }}
             className="section-kicker"
           >
-            <Sparkles size={14} /> Available for impact-driven products
+            <Sparkles size={14} /> Open to thoughtful collaborations
           </Motion.span>
 
           <Motion.h1
@@ -32,9 +32,9 @@ const Hero = () => {
           >
             <span className="heading-gradient">Elegant software.</span>
             <br />
-            Bold execution.
+            Calm process.
             <br />
-            Human outcomes.
+            Steady progress.
           </Motion.h1>
 
           <Motion.p
@@ -43,8 +43,7 @@ const Hero = () => {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="mt-7 max-w-2xl font-body text-sm text-gray-300 sm:text-base md:text-lg"
           >
-            I am Khato Lee, a software developer crafting thoughtful interfaces
-            and dependable backend systems with React, Java, and Spring Boot.
+            Building reliable products with React, Java, and Spring Boot.
           </Motion.p>
 
           <Motion.div
@@ -73,13 +72,13 @@ const Hero = () => {
               href="#projects"
               className="glow-button min-w-0 rounded-xl bg-purple-600 px-4 py-3 text-center font-body text-xs font-semibold uppercase tracking-[0.08em] text-white transition hover:bg-purple-500 sm:text-sm sm:tracking-wide"
             >
-              Explore Projects
+              View Work
             </a>
             <a
               href="#contact"
               className="min-w-0 rounded-xl border border-blue-300/35 bg-blue-400/10 px-4 py-3 text-center font-body text-xs font-semibold uppercase tracking-[0.08em] text-blue-200 transition hover:bg-blue-400/20 sm:text-sm sm:tracking-wide"
             >
-              Let&apos;s Connect
+              Say Hello
             </a>
           </Motion.div>
         </div>
@@ -112,7 +111,7 @@ const Hero = () => {
           <div className="absolute right-3 bottom-6 section-glass rounded-2xl px-3 py-2 sm:-right-4 sm:bottom-8 sm:px-4 sm:py-3 lg:-right-6">
             <p className="font-heading text-xl text-blue-200 sm:text-2xl">3</p>
             <p className="font-body text-[10px] uppercase tracking-[0.16em] text-gray-300 sm:text-xs">
-              flagship builds
+              projects shared
             </p>
           </div>
         </Motion.div>

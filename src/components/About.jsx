@@ -47,7 +47,7 @@ const About = () => {
         >
           <span className="section-kicker">About</span>
           <h2 className="mt-4 font-heading text-4xl text-purple-200 sm:text-5xl md:text-6xl">
-            Built on grit, guided by purpose
+            A little about my work
           </h2>
         </Motion.div>
 

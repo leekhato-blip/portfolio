@@ -60,7 +60,7 @@ const Testimonials = () => {
         >
           <span className="section-kicker">Testimonials</span>
           <h2 className="mt-4 font-heading text-4xl text-purple-200 sm:text-5xl md:text-6xl">
-            Words from people I built with
+            Feedback from past collaborators
           </h2>
         </Motion.div>
 
