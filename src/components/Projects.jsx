@@ -118,8 +118,8 @@ const Projects = () => {
                     loading="lazy"
                     className="h-52 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-56"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/75 to-transparent" />
-                  <h3 className="absolute bottom-4 left-4 font-heading text-2xl text-purple-100 sm:text-3xl">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/75 to-transparent transition duration-300 sm:opacity-60 sm:group-hover:opacity-100 sm:group-focus-within:opacity-100" />
+                  <h3 className="absolute bottom-4 left-4 font-heading text-2xl text-purple-100 transition duration-300 sm:text-3xl sm:translate-y-2 sm:opacity-0 sm:group-hover:translate-y-0 sm:group-hover:opacity-100 sm:group-focus-within:translate-y-0 sm:group-focus-within:opacity-100">
                     {project.title}
                   </h3>
                 </div>
