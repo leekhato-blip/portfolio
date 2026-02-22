@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
 import { motion as Motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import {
+  riseInSoft,
+  sectionHeaderReveal,
+  staggerSoft,
+  viewportHeader,
+  viewportSection,
+} from "../animations/scroll";
 import StarryBackground from "./StarryBackground";
 
 const projects = [
@@ -71,9 +78,10 @@ const Projects = () => {
 
       <div className="relative z-10 mx-auto max-w-7xl">
         <Motion.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.35 }}
+          variants={sectionHeaderReveal}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportHeader}
           className="mb-12 text-center"
         >
           <span className="section-kicker">Projects</span>
@@ -82,14 +90,18 @@ const Projects = () => {
           </h2>
         </Motion.div>
 
-        <div className="grid gap-7 md:grid-cols-2 xl:grid-cols-3">
+        <Motion.div
+          variants={staggerSoft}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportSection}
+          className="grid gap-7 md:grid-cols-2 xl:grid-cols-3"
+        >
           {projects.map((project, index) => (
             <Motion.article
               key={project.title}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ delay: index * 0.08 }}
+              variants={riseInSoft}
+              transition={{ duration: 0.75, delay: index * 0.02 }}
               whileHover={{ y: -6 }}
               className="group section-glass overflow-hidden rounded-3xl"
             >
@@ -157,7 +169,7 @@ const Projects = () => {
               </button>
             </Motion.article>
           ))}
-        </div>
+        </Motion.div>
       </div>
 
       <AnimatePresence>

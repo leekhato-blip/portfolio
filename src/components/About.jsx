@@ -1,6 +1,15 @@
 import { useState } from "react";
 import { motion as Motion } from "framer-motion";
 import { Diamond, Sparkles } from "lucide-react";
+import {
+  cardSlideLeft,
+  cardSlideRight,
+  riseInSoft,
+  sectionHeaderReveal,
+  viewportHeader,
+  viewportItem,
+  viewportSection,
+} from "../animations/scroll";
 import StarryBackground from "./StarryBackground";
 
 const milestones = [
@@ -40,9 +49,10 @@ const About = () => {
 
       <div className="relative z-10 mx-auto max-w-7xl">
         <Motion.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.35 }}
+          variants={sectionHeaderReveal}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportHeader}
           className="mb-12 text-center"
         >
           <span className="section-kicker">About</span>
@@ -53,9 +63,10 @@ const About = () => {
 
         <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10">
           <Motion.article
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
+            variants={cardSlideLeft}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportSection}
             className="section-glass relative rounded-3xl p-6 sm:p-8 md:p-10"
           >
             <Sparkles className="mb-5 text-purple-300" />
@@ -104,9 +115,10 @@ const About = () => {
           </Motion.article>
 
           <Motion.aside
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
+            variants={cardSlideRight}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportSection}
             className="section-glass rounded-3xl p-6 sm:p-8 md:p-10"
           >
             <h3 className="font-heading text-3xl text-purple-200 sm:text-4xl">Journey</h3>
@@ -115,10 +127,12 @@ const About = () => {
               {milestones.map((milestone, index) => (
                 <Motion.div
                   key={milestone.year}
-                  initial={{ opacity: 0, y: 14 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.35 }}
-                  transition={{ delay: index * 0.08 }}
+                  variants={riseInSoft}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={viewportItem}
+                  transition={{ delay: index * 0.08, duration: 0.65 }}
+                  style={{ willChange: "transform, opacity" }}
                   className="relative pl-10"
                 >
                   <Diamond

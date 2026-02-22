@@ -10,6 +10,15 @@ import {
   SiLinux,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
+import {
+  popInSoft,
+  riseInSoft,
+  sectionHeaderReveal,
+  staggerSoft,
+  viewportHeader,
+  viewportItem,
+  viewportSection,
+} from "../animations/scroll";
 import StarryBackground from "./StarryBackground";
 
 // ✅ Skills with coords + levels
@@ -101,9 +110,10 @@ const Skills = () => {
     >
       <StarryBackground starCount={50} />
       <Motion.div
-        initial={{ opacity: 0, y: 12 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        variants={sectionHeaderReveal}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportHeader}
         className="mb-12 text-center"
       >
         <span className="section-kicker">Skills</span>
@@ -113,14 +123,19 @@ const Skills = () => {
       </Motion.div>
 
       {/* 📱 Mobile: Grid view with progress bars */}
-      <div className="block lg:hidden grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <Motion.div
+        variants={staggerSoft}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportSection}
+        className="block lg:hidden grid grid-cols-1 sm:grid-cols-2 gap-6"
+      >
         {skills.map((skill, i) => {
           const Icon = skill.icon;
           return (
             <Motion.div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              variants={riseInSoft}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="flex flex-col gap-2 bg-[#1e1b4b]/80 p-4 rounded-xl shadow-md"
             >
@@ -147,7 +162,7 @@ const Skills = () => {
             </Motion.div>
           );
         })}
-      </div>
+      </Motion.div>
 
       {/* 💻 Desktop version */}
       <div className="hidden lg:block relative w-full h-[850px]">
@@ -183,9 +198,11 @@ const Skills = () => {
           return (
             <Motion.div
               key={i}
-              initial={{ opacity: 0, scale: 0 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, delay: i * 0.2 }}
+              variants={popInSoft}
+              initial="hidden"
+              whileInView="visible"
+              viewport={viewportItem}
+              transition={{ duration: 0.9, delay: i * 0.08 }}
               className="absolute flex items-center gap-3 group"
               style={{
                 top: skill.y,

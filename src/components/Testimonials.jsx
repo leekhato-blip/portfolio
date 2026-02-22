@@ -1,5 +1,11 @@
 import { motion as Motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import {
+  riseInSoft,
+  sectionHeaderReveal,
+  viewportHeader,
+  viewportSection,
+} from "../animations/scroll";
 import StarryBackground from "./StarryBackground";
 
 const testimonials = [
@@ -53,9 +59,10 @@ const Testimonials = () => {
 
       <div className="relative z-10 mx-auto max-w-6xl">
         <Motion.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.35 }}
+          variants={sectionHeaderReveal}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportHeader}
           className="mb-12 text-center"
         >
           <span className="section-kicker">Testimonials</span>
@@ -64,7 +71,13 @@ const Testimonials = () => {
           </h2>
         </Motion.div>
 
-        <div className="relative mx-auto max-w-4xl">
+        <Motion.div
+          variants={riseInSoft}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportSection}
+          className="relative mx-auto max-w-4xl"
+        >
           <div className="soft-ring -left-10 top-16 hidden h-24 w-24 md:block" />
           <div className="soft-ring -right-10 bottom-16 hidden h-24 w-24 md:block" />
 
@@ -109,7 +122,7 @@ const Testimonials = () => {
               />
             ))}
           </div>
-        </div>
+        </Motion.div>
       </div>
     </section>
   );

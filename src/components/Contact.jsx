@@ -4,6 +4,14 @@ import StarryBackground from "./StarryBackground";
 import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { Check, X } from "lucide-react";
 import { send } from "@emailjs/browser";
+import {
+  cardSlideLeft,
+  cardSlideRight,
+  sectionHeaderReveal,
+  staggerWide,
+  viewportHeader,
+  viewportSection,
+} from "../animations/scroll";
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 
@@ -99,9 +107,10 @@ const Contact = () => {
 
       <div className="relative z-10 mx-auto max-w-7xl">
         <Motion.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.35 }}
+          variants={sectionHeaderReveal}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportHeader}
           className="mb-12 text-center"
         >
           <span className="section-kicker">Contact</span>
@@ -110,11 +119,15 @@ const Contact = () => {
           </h2>
         </Motion.div>
 
-        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+        <Motion.div
+          variants={staggerWide}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportSection}
+          className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]"
+        >
           <Motion.aside
-            initial={{ opacity: 0, x: -22 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.35 }}
+            variants={cardSlideLeft}
             className="section-glass rounded-3xl p-6 sm:p-8"
           >
             <h3 className="font-heading text-3xl text-purple-200 sm:text-4xl">
@@ -177,7 +190,7 @@ const Contact = () => {
             </div>
           </Motion.aside>
 
-          <div className="relative">
+          <Motion.div variants={cardSlideRight} className="relative">
             <AnimatePresence>
               {showShootingStar && (
                 <Motion.div
@@ -201,9 +214,6 @@ const Contact = () => {
             </AnimatePresence>
 
             <Motion.form
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
               onSubmit={onSubmit}
               className="section-glass flex flex-col gap-4 rounded-3xl p-6 sm:p-8"
               aria-describedby="contact-instructions"
@@ -254,8 +264,8 @@ const Contact = () => {
                 {sending ? "Sending..." : "Send Message"}
               </Motion.button>
             </Motion.form>
-          </div>
-        </div>
+          </Motion.div>
+        </Motion.div>
       </div>
 
       <AnimatePresence>

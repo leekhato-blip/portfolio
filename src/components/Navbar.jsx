@@ -57,34 +57,34 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5">
+    <nav className="fixed inset-x-0 top-0 z-50 px-2.5 pt-2.5 sm:px-5 sm:pt-3">
       <Motion.div
         initial={{ opacity: 0, y: -16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.45 }}
         className={`mx-auto w-full max-w-7xl overflow-hidden rounded-[1.15rem] border backdrop-blur-xl transition-all duration-300 ${
           scrolled
-            ? "border-purple-200/30 bg-[#0f172a]/72 shadow-[0_16px_40px_rgba(2,6,23,0.55)]"
-            : "border-purple-200/15 bg-[#0f172a]/45"
+            ? "border-purple-200/45 bg-[#0c1328]/88 shadow-[0_18px_44px_rgba(2,6,23,0.62)]"
+            : "border-purple-200/40 bg-[#0c1328]/82 shadow-[0_14px_32px_rgba(2,6,23,0.5)]"
         }`}
       >
         <span
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_0%,rgba(168,85,247,0.24),transparent_45%),radial-gradient(circle_at_88%_100%,rgba(59,130,246,0.18),transparent_35%)]"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_0%,rgba(168,85,247,0.32),transparent_45%),radial-gradient(circle_at_88%_100%,rgba(59,130,246,0.24),transparent_35%)]"
         />
 
-        <div className="relative flex h-[4.25rem] items-center justify-between gap-3 px-3 sm:px-5">
+        <div className="relative flex h-[3.85rem] items-center justify-between gap-2 px-2.5 sm:h-[4.25rem] sm:gap-3 sm:px-5">
           <Motion.button
             type="button"
             onClick={() => scrollToSection("hero")}
             whileHover={{ y: -1 }}
-            className="group inline-flex items-center gap-2.5"
+            className="group inline-flex min-w-0 flex-1 items-center gap-2 pr-1 sm:flex-none"
             aria-label="Go to top"
           >
-            <span className="grid h-9 w-9 place-items-center rounded-full border border-purple-300/40 bg-purple-500/20 font-body text-xs font-semibold uppercase tracking-[0.16em] text-purple-100">
+            <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-purple-300/40 bg-purple-500/20 font-body text-[10px] font-semibold uppercase tracking-[0.14em] text-purple-100 sm:h-9 sm:w-9 sm:text-xs sm:tracking-[0.16em]">
               KL
             </span>
-            <span className="font-heading text-2xl font-semibold text-purple-100 sm:text-3xl">
+            <span className="whitespace-nowrap font-heading text-[1.12rem] leading-none font-semibold text-purple-100 sm:text-3xl">
               Khato Lee
             </span>
           </Motion.button>
@@ -130,7 +130,7 @@ const Navbar = () => {
           <button
             type="button"
             onClick={() => setIsOpen((prev) => !prev)}
-            className="rounded-lg border border-purple-300/30 bg-purple-500/12 p-2 text-purple-100 transition hover:bg-purple-500/20 xl:hidden"
+            className="shrink-0 rounded-lg border border-purple-300/30 bg-purple-500/12 p-2 text-purple-100 transition hover:bg-purple-500/20 xl:hidden"
             aria-expanded={isOpen}
             aria-label={isOpen ? "Close menu" : "Open menu"}
           >
